@@ -2,6 +2,8 @@
 
 Dockerization of the [marker-api repo](https://github.com/adithya-s-k/marker-api) to convert a PDF to markdown.
 
+![PDF 2 markdown](assets/pdf2markdown.png)
+
  * Github: [marker-api](https://github.com/adithya-s-k/marker-api)
 
 ## Requisites
