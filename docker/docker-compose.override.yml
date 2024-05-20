@@ -1,0 +1,5 @@
+version: "3.8"
+
+services:
+  marker_api:
+    entrypoint: ["bash", "-c", "python server.py"]

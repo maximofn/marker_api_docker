@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  marker_api:
+    container_name: marker_api
+    image: maximofn/marker_api:1.0.1
+    build: .
+    runtime: nvidia
+    network_mode: "host"
+    volumes:
+      - ./hub:/root/.cache/huggingface/hub
+    tty: true
+    stdin_open: true
