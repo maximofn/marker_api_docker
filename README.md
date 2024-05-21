@@ -45,7 +45,7 @@ This up a container with the marker-api running on the port 8000. You must to wa
 To convert a PDF to markdown you can use the following command
 
 ```bash
-python pdf2markdown.py ----pdf_file_path <path_to_pdf>
+python pdf2markdown.py --pdf_file_path <path_to_pdf>
 ```
 
 The markdown file will be saved into a folder in the same directory of the PDF file.
