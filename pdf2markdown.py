@@ -43,13 +43,16 @@ def main(args):
             with open(f"{pdf_file_name}/{image_name}", 'wb') as image_file:
                 image_file.write(image_bytes)
         
+        # Find all reference to images in markdown text
         markdown_text = response_json['markdown']
         image_tags = re.findall(r'\[\d+_image_\d.png\]+', markdown_text)
 
+        # Replace image tags by image names
         for i, image_tag in enumerate(image_tags):
             # print(f"replace {image_tag[1:-1]} by image_{i+1}.png")
             markdown_text = markdown_text.replace(image_tag[1:-1], f"image_{i+1}.png")
 
+        # Save markdown file
         with open(f"{pdf_file_name}/{pdf_file_name}.md", 'w') as md_file:
             md_file.write(markdown_text)
 
